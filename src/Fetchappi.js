@@ -7,11 +7,11 @@ function Fetchappi() {
   const [data, setData] = useState([]);
 const apiGet=async()=>{
     const response=await fetch(API_URL)
-    .then((res) => res.json())
+    .then((res) => res.json())   
     .then((dat)=>dat.quotes)
     const responsedata=response.filter((data)=>data.id<11)
     setData(responsedata)
-}
+} 
  useEffect(()=>{
     apiGet();
  },[]);
